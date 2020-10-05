@@ -17,7 +17,7 @@
        </div>
 
        <div class="container" style="background-color: #f1f1f1">
-         <a href="../home.html"><button type="button" class="cancelbtn" value="Cancel">Cancel</button></a>
+         <a href="../index.html"><button type="button" class="cancelbtn" value="Cancel">Cancel</button></a>
          <span class="psw">Don't have an account ?<a href="register2.php">Create One</a></span>
        </div>
     </form>
@@ -27,7 +27,7 @@
 <?php
   if(isset($_POST['s'])){
     session_start();
-    $conn = pg_connect("host=localhost:5432 user=farm dbname=farmhouse") or die("Could not Connect to Database");
+    $conn = pg_connect("host=localhost port=5432 user=farm dbname=farmhouse password=1234") or die("Could not establish connection to database");
     $id = $_POST['uname'];
     $pass=$_POST['pass'];
     $_SESSION['uname']=$id;
