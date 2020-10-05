@@ -43,7 +43,7 @@ nav ul li {
 }
 nav ul li a{
     display: block;
-    text-transforma: uppercase;
+    text-transform: uppercase;
     font-weight: bold;
     padding: 33px 20px;
     text-decoration: none;
