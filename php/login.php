@@ -18,7 +18,7 @@
 
        <div class="container" style="background-color: #f1f1f1">
          <a href="home.html"><button type="button" class="cancelbtn" value="Cancel">Cancel</button></a>
-         <span class="psw">Don't have an account ?<a href="php/register2.php">Create One</a></span>
+         <span class="psw">Don't have an account ?<a href="register2.php">Create One</a></span>
        </div>
     </form>
   </body>
