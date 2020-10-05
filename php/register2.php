@@ -43,7 +43,7 @@
 
 <?php
   if(isset($_POST['s'])){
-    $conn = pg_connect("host=localhost:5432 user=farm dbname=farm_house") or die("Could not establish connection to database");
+    $conn = pg_connect("host=localhost:5432 user=farm dbname=farmhouse") or die("Could not establish connection to database");
     $fnm==$_POST['fname'];
     $lnm=$_POST['lname'];
     $gen=$_POST['sex'];
