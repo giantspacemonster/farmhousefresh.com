@@ -12,11 +12,11 @@
         <input type="text" placeholder="Enter First Name" name="fname" pattern="^[A-Za-Z]+" required>
         <label for="last_name"<b>Last Name</b></label>
         <input type="text" placeholder="Enter Last Name" name="lname" pattern="^[A-Za-Z]+" required>
-        <label for="gender"><b>Gender></b></label>
+        <label for="gender"><b>Gender</b></label>
         <input type="radio" name="sex" value="male" required>MALE
         <input type="radio" name="sex" value="female" required>FEMALE
         <input type="radio" name="sex" value="others" required>Others
-
+	
         <br><br>
         <label for="dob"><b>Date Of Birth</b></label>
         <input type="date" name="dob" required>
@@ -26,7 +26,7 @@
         <lable for="mobno"><b>Mobile No.</b></label>
         <input type="text" placeholder="Enter mobile No." name="mobno" pattern="[0-9]{10}" required>
         <lable for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email Address" name="email1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <input type="text" placeholder="Enter Email Address" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter a Secure Password" name="psw" required>
         <label for="psw-repeat"><b>Re-Enter Password</b></label>
@@ -43,8 +43,8 @@
 
 <?php
   if(isset($_POST['s'])){
-    $conn = pg_connect("host=localhost port=5432 user=farmhousedb dbname=farmhousedb password=secretpassword") or die("Could not establish connection to database");
-    $fnm==$_POST['fname'];
+    $conn = pg_connect("host=localhost port=5432 user=farmhousefreshdb dbname=farmhousefreshdb password=secretpassword") or die("Could not establish connection to database");
+    $fnm=$_POST['fname'];
     $lnm=$_POST['lname'];
     $gen=$_POST['sex'];
     $dob=$_POST['dob'];
@@ -61,18 +61,19 @@
       ?><script type="text/javascript">alert("User already exists!");</script>
       <?php
     }
-    else if($pass1 != pass) {
+    else if($pass1 != $pass) {
       ?><script type="text/javascript">alert("Passwords do not match!");</script>
       <?php
     }
+    
     else if($pass<8){
-      ?><script type="text/javascript">a;ert("Passwords must be at least 8 characters long");</script>
+      ?><script type="text/javascript">alert("Passwords must be at least 8 characters long");</script>
       <?php
     }
     else {
       $r="INSERT INTO reg(first_name,last_name,gen,dob,addr,email,mno,password) VALUES('$fnm','$lnm','$gen','$dob','$addr','$email','$mobno','$pass')";
-      $result=pg_query($conn,$r) or die("Could not Execute database instruction(register2.php:73:INSERT INTO reg...)");
-      $r1=pg_query("INSERT INTO login VALUSE('$email','$pass1')");
+      $result=pg_query($conn,$r) or die("Could not Execute database instruction");
+      $r1=pg_query("INSERT INTO login VALUES('$email','$pass1')");
       ?><script type="text/javascript">alert("Sign up Successful. Please Login using your username and password.");</script>
       <?php echo "<script>location.href='login.php';</script>";
     }
