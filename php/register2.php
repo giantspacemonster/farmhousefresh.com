@@ -43,7 +43,7 @@
 
 <?php
   if(isset($_POST['s'])){
-    $conn = pg_connect("host=localhost port=5432 user=farm dbname=farmhouse password=1234") or die("Could not establish connection to database");
+    $conn = pg_connect("host=localhost port=5432 user=farmhousedb dbname=farmhousedb password=secretpassword") or die("Could not establish connection to database");
     $fnm==$_POST['fname'];
     $lnm=$_POST['lname'];
     $gen=$_POST['sex'];
@@ -71,7 +71,7 @@
     }
     else {
       $r="INSERT INTO reg(first_name,last_name,gen,dob,addr,email,mno,password) VALUES('$fnm','$lnm','$gen','$dob','$addr','$email','$mobno','$pass')";
-      $result=pg_query($conn,$r) or die("Could not Execute database injection");
+      $result=pg_query($conn,$r) or die("Could not Execute database instruction(register2.php:73:INSERT INTO reg...)");
       $r1=pg_query("INSERT INTO login VALUSE('$email','$pass1')");
       ?><script type="text/javascript">alert("Sign up Successful. Please Login using your username and password.");</script>
       <?php echo "<script>location.href='login.php';</script>";

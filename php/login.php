@@ -27,7 +27,7 @@
 <?php
   if(isset($_POST['s'])){
     session_start();
-    $conn = pg_connect("host=localhost port=5432 user=farm dbname=farmhouse password=1234") or die("Could not establish connection to database");
+    $conn = pg_connect("host=localhost port=5432 user=farmhousedb dbname=farmhousedb password=secretpassword") or die("Could not establish connection to database");
     $id = $_POST['uname'];
     $pass=$_POST['pass'];
     $_SESSION['uname']=$id;
