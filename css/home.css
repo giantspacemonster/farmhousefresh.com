@@ -126,22 +126,14 @@ img {
 .text {
     color: #f2f2f2;
     font-size: 30px;
+    margin-left: 20px;
+    margin-right:20px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    bottom: 400px;
     width: 100%;
     text-align: center;
 }
-
-/* Number text */
-.numberText {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
 /* styles for the dot navigator of lsides */
 .dot {
     cursor: pointer;
@@ -201,6 +193,7 @@ img {
     margin-left: 170px;
     margin-top: 20px;
 }
+
 footer {
     margin: 1px 1px 0 1px;
     padding: 0;

@@ -27,7 +27,7 @@
 <?php
   if(isset($_POST['s'])){
     session_start();
-    $conn = pg_connect("host=localhost port=5432 user=farmhousedb dbname=farmhousedb password=secretpassword") or die("Could not establish connection to database");
+    $conn = pg_connect("host=localhost port=5432 user=farmhousefreshdb dbname=farmhousefreshdb password=secretpassword") or die("Could not establish connection to database");
     $id = $_POST['uname'];
     $pass=$_POST['pass'];
     $_SESSION['uname']=$id;
@@ -49,7 +49,7 @@
 
         ?><script type="text/javascript">alert("You are now logged in!")</script>
 	<?php
-	header("location:home2.php");
+	header("location:../homeLoggedIn.php");
       }
       else {
         ?><script type="text/javascript">alert<"Invalid Credentials");</script>
