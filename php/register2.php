@@ -1,7 +1,8 @@
 <DOCTYLE HTML>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style_register2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style_register2.css">
   </head>
   <body>
     <form class="reg_content" method="POST" action="register2.php">

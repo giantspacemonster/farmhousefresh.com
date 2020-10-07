@@ -64,7 +64,7 @@
     </div>
 
     <div class="feed">
-      <a href="feedback2.php">Feedback</font></a>
+      <a href="./php/feedback2.php">Feedback</font></a>
     </div>
 
     <script src="scripts/slides.js"></script>
