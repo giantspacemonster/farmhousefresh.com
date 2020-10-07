@@ -24,7 +24,50 @@ Start by creating a directory in <code>/var/www/college-project/</code>.<br/>
 Inside of the directory created, clone this project:<br/>
 <code>sudo git clone https://github.com/giantspacemonster/farmhousefresh.com.git</code><br/>
 Or<br/>
-<code>sudo git clone ssh:</code>
-
+<code>gh repo clone giantspacemonster/farmhousefresh.com</code>
+  
+  Create a Virtual host in apache2, enable the college-project site, and (optional) disable default apache site.
+  Use the following tutorial to do so:
+  https://ubuntu.com/tutorials/install-and-configure-apache#3-creating-your-own-website
+</li>
+<li><h6>Install PostgreSQL</h6>
+  <code>sudo apt install postgresql postgresql-contrib</code><br/>
+  <ol>
+    <li><h7>Start PostgreSQL as root user #postgres.</h7>
+      <code>sudo psql -U postgres</code>
+    </li>
+    <li><h7>Create new user</h7>
+      <code>CREATE USER username WITH LOGIN PASSWORD'secretpassword';</code>
+      Also set the user as superuser:<br/>
+      <code>ALTER USER username WITH SUPERUSER;</code>
+    </li>
+    <li><h7>Create new Database</h7>
+      Also set the owner to the created username:<br/>
+      <code>CREATE DATABASE databasename WITH OWNER=username;</code><br/>
+      Note that the username used in the project is farmhousefreshdb and the database used is farmhousefreshdb and the password used is 'secretpassword'
+    </li>
+    <li><h7>Create the tables required</h7><br/>
+      <code>CREATE TABLE public.reg</code><br/>
+            <code>(</code><br/>
+              <code>first_name character varying(40),</code><br/>
+              <code>last_name character varying(40),</code><br/>
+  <code>gen character varying(10),</code><br/>
+  <code>dob timestamp without time zone,</code><br/>
+  <code>addr character varying(150),</code><br/>
+  <code>email character varying(40),</code><br/>
+  <code>password character varying(30),</code><br/>
+  <code>mno bigint,</code><br/>
+  <code>CONSTRAINT reg_email_key UNIQUE (email),</code><br/>
+  <code>CONSTRAINT reg_mno_key UNIQUE (mno),</code><br/>
+  <code>CONSTRAINT reg_password_key UNIQUE (password)</code><br/>
+      <code>)</code><br/>
+<code>WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.reg
+  OWNER TO farmhousefreshdb;
+      </code>
+    </li>
+  </ol>
 </li>
 </ol>
