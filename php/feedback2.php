@@ -1,42 +1,40 @@
-<head>
-<link rel="icon" href="../images/logo.jpg" type="image/icon type">
-<link rel="stylesheet" type="text/css" href="../css/feedback.css">
-<title>Feedback</title>
-</head>
-<body>
-<div class="menu">
-	<a href ="home.html" class="brand"><img src="../images/logo.png"></a>
-	<nav>
-		<ul>
-			<li><a href="home.html">Home</a></li>
-	     		<li><a href="vegetables.php">Vegetables</a></li>
-			<li><a href="fruits.php">Fruits</a></li>
-			<li><a href="seeds.php">Seeds</a></li>
-	   		<li><a href="about.html">ABOUT US</a></li>
-			<li><a href="login.php">Login</a></li>
-		</ul>
-	</nav>
-</div>
-<section></section>
-</body>
+<html>
+  <head>
+    <link rel="icon" href="../images/logo.png" >
+    <link rel="stylesheet" type="text/css" href="../css/feedback.css">
+    <title>Feedback</title>
+  </head>
+  <body class="bodyContainer">
+    <div class="menu">
+      <a href ="../homeLoggedIn.php" class="brand">
+      <img src="../images/logo.png"></a>
+      <nav>
+        <ul>
+	  <li><a href="../homeLoggedIn.php">Home</a></li>
+	  <li><a href="vegetables.php">Vegetables</a></li>
+	  <li><a href="fruits.php">Fruits</a></li>
+	  <li><a href="seeds.php">Seeds</a></li>
+	  <li><a href="about.html">ABOUT US</a></li>
+	  <li><a href="login.php">Login</a></li>
+	</ul>
+      </nav>
+    </div>
+    <section></section>
 
-<form action="feedback2.php" method="POST">
-<div class="container">
-
-	<label for="Email"><b>Email</b></label>
-	<input type="text" placeholder="Enter Email" name="email" required>
-	
-	<label for="mobno"><b>Mobile No</b></label>
-	<input type="text" placeholder="Enter Mobile No" name="mobno" required>
-
-	
-	<label for="message"><b>Message:&nbsp&nbsp&nbsp&nbsp</b></label>
-	<br><br>
-	<textarea type="text" placeholder="Type Your Message" name="msg" required="" style="width:464px; height:157px;"></textarea>
-	<button type="submit" name="s">Submit Your Feedback</button>
-	</div>
-</form>
-
+    <form action="feedback2.php" method="POST">
+      <div class="container">
+        <label for="Email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <label for="mobno"><b>Mobile No</b></label>
+        <input type="text" placeholder="Enter Mobile No" name="mobno" required>
+        <label for="message"><b>Message:&nbsp&nbsp&nbsp&nbsp</b></label>
+        <br><br>
+        <textarea type="text" placeholder="Type Your Message" name="msg" required="" style="width:464px; height:157px;"></textarea>
+        <button type="submit" name="s">Submit Your Feedback</button>
+      </div>
+    </form>
+  </body>
+</html>
 <?php
 
 	if(isset($_POST['s']))
