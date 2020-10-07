@@ -47,6 +47,7 @@ Or<br/>
       Note that the username used in the project is farmhousefreshdb and the database used is farmhousefreshdb and the password used is 'secretpassword'
     </li>
     <li><h7>Create the tables required</h7><br/>
+      Table reg:<br/>
       <code>CREATE TABLE public.reg</code><br/>
             <code>(</code><br/>
               <code>first_name character varying(40),</code><br/>
@@ -66,6 +67,65 @@ Or<br/>
 );
 ALTER TABLE public.reg
   OWNER TO farmhousefreshdb;
+      </code>
+      <br/>
+      Table login:<br/>
+      <code>
+        CREATE TABLE public.login
+        (
+          email character varying(40),
+          password character varying(30),
+          CONSTRAINT login_email_fkey FOREIGN KEY (email)
+          REFERENCES public.reg (email) MATCH SIMPLE
+          ON UPDATE NO ACTION ON DELETE SET NULL,
+          CONSTRAINT login_password_fkey FOREIGN KEY (password)
+          REFERENCES public.reg (password) MATCH SIMPLE
+          ON UPDATE NO ACTION ON DELETE SET NULL
+        )
+        WITH (
+        OIDS=FALSE
+        );
+        ALTER TABLE public.login
+        OWNER TO farmhousefreshdb;
+      </code>
+      <br/>
+      Table Cart:
+      <code>
+        CREATE TABLE public.cart
+        (
+          sr_no integer NOT NULL DEFAULT nextval('cart_sr_no_seq'::regclass),
+          productname character varying(40),
+          quantity integer,
+          price integer,
+          CONSTRAINT cart_pkey PRIMARY KEY (sr_no)
+        )
+        WITH (
+          OIDS=FALSE
+        );
+        ALTER TABLE public.cart
+          OWNER TO farmhousefreshdb;
+      </code>
+      <br/>
+      Table feedback:
+      <br/>
+      <code>
+        CREATE TABLE public.feedback
+        (
+          mno bigint,
+          message character varying(250),
+          email character varying(40),
+          CONSTRAINT feedback_email_fkey FOREIGN KEY (email)
+          REFERENCES public.reg (email) MATCH SIMPLE
+          ON UPDATE NO ACTION ON DELETE NO ACTION,
+          CONSTRAINT feedback_mno_fkey FOREIGN KEY (mno)
+          REFERENCES public.reg (mno) MATCH SIMPLE
+          ON UPDATE NO ACTION ON DELETE NO ACTION
+        )
+        WITH (
+          OIDS=FALSE
+        );
+        ALTER TABLE public.feedback
+          OWNER TO farmhousefreshdb;
       </code>
     </li>
   </ol>
