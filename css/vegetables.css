@@ -6,10 +6,9 @@ body
 	background:url("../images/garlicbg.png");
 	background-size:cover;
 	background-repeat: no-repeat;
+	position: absolute;
 }
-section{
-    position: absolute;
-}
+
 
 .card-parent {
     display: flex;
@@ -19,26 +18,56 @@ section{
     min-width: 1800px;
 }
 .card {
-    margin-top:20px;
+    background-color:#e1e1e1;
+    //background: url('../images/vectorCardClipped.png');
+    margin-top:40px;
+    margin-left:40px;
     padding: 20px;
     position: inherit;
-    //box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 4px 8px 0 #2f2f2f;
     transition: 0.8s;
-    width:512px;
-    display: flex;
-    border-radius: 5px; //rounded corners
+    display: inline-block;
+    width:256px;
+    //max-width:256px;
+    height: auto;
+    border-radius: 10px; //rounded corners
 }
+.turncate{
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: "(...)";
+}
+.turncate:hover{
+    white-space: normal;
+    overflow: visible;
+}
+
 img{
     border-radius:5px 0 0 5px;
 }
 .card:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
-    background-color: #556bbf;
+    background-color: white;
 }
 .card-container{
     padding: 2px 16px;
-    color: white;
+    color: black;
     font-family: "Courier New", Courier, monospace;
+}
+
+.cart {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid blue;
+    padding: 12px;
+    margin: 8px;
+    width: 100%;
+    
+    background-color:skyblue;
+    color: white;
+    float: right;
 }
 
 menu
@@ -126,21 +155,6 @@ nav ul li ul li a
 
 nav ul li ul li a:active{
     color: white;
-}
-
-#triangle-topleft {
-      width: 0;
-      height: 0;
-      border-top: 256px solid #273b83 ;
-      border-right: 500px solid transparent;
-      z-index: -1;
-}
-#triangle-bottomright {
-      width: 0;
-      height: 0;
-      border-bottom: 256px solid #556bbf;
-      border-left: 500px solid transparent;
-      z-index: -1;
 }
 
 

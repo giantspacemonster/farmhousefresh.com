@@ -30,7 +30,6 @@
   $conn=pg_connect("host=localhost port=5432 user=farmhousefreshdb dbname=farmhousefreshdb password=secretpassword") or die("Couldn't Connect");
   $r=0;
   $q=pg_query("select * from product where p_category='vegetables'");
-  $ic=1;
   //$count1=pg_num_rows($q);
   //echo "$count1";
   while($row=pg_fetch_array($q))
@@ -41,12 +40,12 @@
 <div class="card">
   <img src="<?php echo $row['img'];?>" width="256px" height="256px">
   <div class="card-container">
-    <label for="prodName">Product:</label><?php echo $row['p_name'];?><br/>
-    <label for="price">Price:</label><?php echo $row['p_rate'];?><br/>
-    <label for="quantity">Stocks remaining:</label><?php echo $row['quantity']; ?>
+    <p class="turncate"><?php echo $row['p_name'];?>(<?php echo $row['p_size'] ?> Kg/s Per batch)</p>
+    <label for="price">Price:</label>&#8377 <?php echo $row['p_rate'];?><br/>
+    Stock:<?php echo $row['quantity']; ?><br/>
+    <label for="quantity">Quantity:</label><input type="number" min="1" max="<?php echo $row['quantity']; ?>" name="quantity" /><br/>
+    <button class="cart" type="submit" name='s' >ADD TO CART</button>
   </div>
-  <section id="triangle-bottomright"></section>
-  <section id="triangle-topleft"></section>
 </div>
 
 <?php 
