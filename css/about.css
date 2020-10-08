@@ -1,5 +1,9 @@
+html{
+    overflow-x: hidden;
+}
 body{
     margin:0px;
+    position: relative;
     padding:0px;
     background-color: #eeeeee;
 }
