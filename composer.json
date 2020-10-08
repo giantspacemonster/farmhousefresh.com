@@ -1,6 +1,7 @@
 {
-
+    "name": "farmhousefresh.com-project",
+    "description": "college project for fergusson CS TY sem 5",
     "require": {
-	"bootstrap": "4.4.*"
+	"monolog/monolog":"1.0.*"
     }
 }
