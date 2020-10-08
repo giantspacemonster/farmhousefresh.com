@@ -1,7 +1,7 @@
 <html>
   <head>
     <link rel="icon" href="../images/logo.png" >
-    <link rel="stylesheet" type="text/css" href="../css/feedback.css">
+    <link rel="stylesheet" type="text/css" href="../css/feedback.css?v=<?php echo time();?>">
     <title>Feedback</title>
   </head>
   <body class="bodyContainer">

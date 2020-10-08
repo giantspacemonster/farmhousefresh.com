@@ -131,9 +131,18 @@ img {
     margin-right:20px;
     padding: 8px 12px;
     position: absolute;
+    max-width:800px;
+    min-width:400px;
+    overflow:hidden;
     bottom: 400px;
     width: 100%;
     text-align: center;
+    transition: color 2s;
+}
+
+.text:hover {
+    color: #ffb6c1;
+
 }
 /* styles for the dot navigator of lsides */
 .dot {
@@ -187,7 +196,7 @@ img {
 }
 
 .feed:hover, .feed:active {
-    background-color: #787878;
+    background-color: #ffffff;
 }
 
 .log {

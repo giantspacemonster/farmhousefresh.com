@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
@@ -27,7 +27,7 @@
       </nav>
     </div>
     <div class="log">
-      <a href="php/login.php"><font color="#45c2f7" face="bold" size="4px">Welcome To Farmhouse Fresh!</font></a>
+      <a href="php/login.php"><font color="#ffffff" face="bold" size="6px">Welcome To Farmhouse Fresh!</font></a>
     </div>
     
     <section></section>
