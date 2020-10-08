@@ -13,8 +13,8 @@ section{
 .page-container{
     border:none;
     box-shadow: 2px 2px 4px #0e0e0e;
-    min-width: 400px;
-    height: 980px;
+    width: auto;
+    height: auto;
     background: linear-gradient(#ededed,#fefefe);
     padding: 24px;
     position: inherit;
@@ -71,11 +71,11 @@ section{
 .text {
     color: #aaaaaa;
     font-family: "Courier New", Courier, monospace;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: bold;
-    margin-left: 300px;
+    margin-left: 450px;
     margin-right:20px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     padding: 8px 12px;
     position: absolute;
     max-width:800px;
@@ -136,13 +136,12 @@ section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 20px;
-    margin: 20px;
-    min-heigth: 900px;
+    padding: 0px;
+    margin: 0px;
 }
 .card {
     margin-top:40px;
-    margin-left: 40px;
+    margin-left: 20px;
     padding: 20px;
     position: inherit;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
