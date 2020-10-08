@@ -14,7 +14,7 @@
 	  <li><a href="vegetables.php">Vegetables</a></li>
 	  <li><a href="fruits.php">Fruits</a></li>
 	  <li><a href="seeds.php">Seeds</a></li>
-	  <li><a href="about.html">ABOUT US</a></li>
+	  <li><a href="../about.html">ABOUT US</a></li>
 	  <li><a href="login.php">Login</a></li>
 	</ul>
       </nav>

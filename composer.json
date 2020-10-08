@@ -1,0 +1,6 @@
+{
+
+    "require": {
+	"bootstrap": "4.4.*"
+    }
+}
