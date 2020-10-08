@@ -1,47 +1,165 @@
 body{
     margin:0px;
     padding:0px;
-    background:url("../images/seawaves.png");
-    background-size:cover;
+    background-color: #eeeeee;
+}
+
+section{
+    height: 500px;
+    background: url('../images/about.png');
+    background-size: cover;
+    
 }
 .page-container{
     border:none;
-    display: flex;
     box-shadow: 2px 2px 4px #0e0e0e;
     min-width: 400px;
-    height: auto;
-    background: linear-gradient(#edcdcd,#d29595);
+    height: 980px;
+    background: linear-gradient(#ededed,#fefefe);
     padding: 24px;
-    color: white;
+    position: inherit;
+    color: black;
     margin-left:200px;
     margin-right:200px;
+    margin-top: 0;
 }
 
-.text{
-    width: 400px;
+/* ------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+.mySlides{
+    display: none;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    min-width: 1200px;
+    max-height: 400px;
+    position:absolute;
+    margin-left: 100px;
+    margin-top: 200px;
+    margin-bottom: 0;
+}
+
+/* Next and Previous buttons */
+.prev, .next {
+    cursor: pointer;
+    top: -50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    position: absolute;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev{
+    right: 32px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #aaaaaa;
     font-family: "Courier New", Courier, monospace;
-
-}
-hr {
-    border: none;
-    border-left: 1px solid #ececec;
-    height: 800px;
-    width:1px;
-}
-
-.side-bar ul li{
-    list-style:none;
     font-size: 12px;
-    transition: font-size 2s;
+    font-weight: bold;
+    margin-left: 300px;
+    margin-right:20px;
+    margin-bottom: 200px;
+    padding: 8px 12px;
+    position: absolute;
+    max-width:800px;
+    min-width:400px;
+    overflow:hidden;
+    bottom: 400px;
+    width: 100%;
+    text-align: center;
+    transition: color 2s;
 }
 
-.side-bar ul li:hover{
-    font-size: 24px;
+.text:hover {
+    color: #ffffff;
+
 }
-a {
-    text-decoration: none;
-    color: white;
+/* styles for the dot navigator of slides */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;;
+    transition: backgrund-color 0.6s ease;
 }
-a:active{
-    color: white;
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4}
+    to { opacity: 1}
+}
+
+/* on smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+	font-size: 11px;
+    }
+}
+
+.shift {
+    max-width: 1100px;
+    position: absolute;
+    margin: auto;
+    margin-top:200px;
+}
+.card-parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+    min-heigth: 900px;
+}
+.card {
+    margin-top:40px;
+    margin-left: 40px;
+    padding: 20px;
+    position: inherit;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.8s;
+    width:440px;
+    display: block;
+    border-radius: 5px; //rounded corners
+}
+img{
+    border-radius:5px 0 0 5px;
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+    background-color: #ececec;
+}
+.card-container{
+    padding: 2px 16px;
+    color: black;
+    font-family: "Courier New", Courier, monospace;
 }
