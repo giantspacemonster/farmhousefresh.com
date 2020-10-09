@@ -27,7 +27,7 @@
       </nav>
     </div>
     <div class="log">
-      <a href="php/login.php"><font color="#ffffff" face="bold" size="6px">Welcome To Farmhouse Fresh!</font></a>
+      <a href="php/login.php"><font color="#ffffff" face="bold" size="6px">Welcome To Farmhouse Fresh <?php echo $_SESSION['uname']; ?> <?php echo $_SESSION['lname'];?> </font></a>
     </div>
     
     <section></section>
@@ -36,17 +36,17 @@
       
       <div class="slideshow-container">
 	<div class="mySlides fade">
-	  <a href="php/login.php"><img src="images/a1.png" alt="Image By Polina Tankilevitch" style="width:100%" height="10%"></a>
+	  <a href="php/vegetables.php"><img src="images/a1.png" alt="Image By Polina Tankilevitch" style="width:100%" height="10%"></a>
 	  <div class="text">For All Your Freshness Needs!</div>
 	</div>
 
 	<div class="mySlides fade">
-	  <a href="php/login.php"><img src="images/a2.png" alt="Photo by Vo Thuy Tien from Pexels" style="width:100%" height="10%"></a>
+	  <a href="php/fruits.php"><img src="images/a2.png" alt="Photo by Vo Thuy Tien from Pexels" style="width:100%" height="10%"></a>
 	  <div class="text">State of the art Nutrition Testing.</div>
 	</div>
 
 	<div class="mySlides fade">
-	  <a href="php/login.php"><img src="images/a3.png" alt="Photo by Lukas from Pexels" style="width:100%" height="10%"></a>
+	  <a href="php/seeds.php"><img src="images/a3.png" alt="Photo by Lukas from Pexels" style="width:100%" height="10%"></a>
 	  <div class="text">From the Fields of Nature.</div>
 	</div>
 
@@ -74,34 +74,31 @@
   <footer>
     <div class="footer-container">
       <div class="footer-message">
-	<p>Hello! We are glad to be serving you the best of our stock, freshly picked from the farm, right to your plate. We take care to not include harmful chemicals in your dinner, and make your meal a healthy treat for your body and your mind, because we at farmhousefresh.com believe the health of our customers is of the utmost importance, and this is the aim we use to guide ourselves further down the road that our endeavour takes us. Happy Treats!</p>
+	<h1>FARMHOUSE FRESH.</h1>
+	<p>
+	  We thank you for choosing our services. We aitm to create possibilities for the connected world, creating interfaces between you and services that concern you. And by choosing us as your favoite online shopping store, you are helping us achieve that goal one step at a time.<br/>
+	  <b>Regards, and Good Health.</b>
+	</p>
       </div>
-      <hr/>
+      <div class="social">
+	Follow<hr/>
       <i class = "fa fa-quora" aria-hidden="true"></i>
       <i class="fa fa-instagram" aria-hidden="true"></i>
       <i class="fa fa-facebook" aria-hidden="true"></i>
       <i class="fa fa-reddit" aria-hidden="true"></i>
       <i class="fa fa-twitter" aria-hidden="true"></i>
-      <hr/>
-      <i class="fa fa-copyright" aria-hidden="ture"></i>2020 FarmhouseFresh. All Rights Reserved
-    </div>
-    <div class="footer-legal">
-      LEGAL
-      <ul>
-      <li><a href="#" class="legal">Terms and Conditions</a></li>
-      <li><a href="#" class="legal">File Licenses</a></li>
-      <li><a href="#" class="legal">Refund Policy</a></li>
-      <li><a href="#" class="legal">Privacy Policies</a></li>
-      </ul>
-    </div>
-
-     <div class="footer-interaction">
-	INTERACTION
-	<ul>
-	  <li><a href="#" class="footer-interaction-link">Support</a></li>
-	  <li><a href="#" class="footer-interaction-link">Contact Us</a></li>
-	</ul>
       </div>
-      
+      <div class="explore">
+	Explore.
+	<hr/>
+	<a href="index.php">Home</a><br/>
+	<a href="about.html">About</a><br/>
+	<a href="#">Careers</a><br/>
+	<a href="#">Developers</a>
+      </div>
+    </div>
+    <div class="bottom-copyright">
+      <i class="fa fa-copyright" aria-hidden="true"></i><p>2020 FarmhouseFresh. All Rights Reserved.</p>
+      </div>
   </footer>
 </html>

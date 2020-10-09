@@ -30,10 +30,11 @@
     $conn = pg_connect("host=localhost port=5432 user=farmhousefreshdb dbname=farmhousefreshdb password=secretpassword") or die("Could not establish connection to database");
     $id = $_POST['uname'];
     $pass=$_POST['pass'];
-    $_SESSION['uname']=$id;
-    $q=pg_query("select * from reg");
+  $q=pg_query("select * from reg");
     $n=0;
-    while($row=pg_fetch_array($q)){
+  while($row=pg_fetch_array($q)){
+  $_SESSION['uname'] = $row['first_name'];
+  $_SESSION['lname'] = $row['last_name'];
       if($row['email']==$id && $row['password']==$pass){
         $n=1;
       }

@@ -4,8 +4,8 @@
     <title>Fresh Market</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" type="text/css" href="../css/vegetables.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="menu">
@@ -29,7 +29,7 @@
 <?php
   $conn=pg_connect("host=localhost port=5432 user=farmhousefreshdb dbname=farmhousefreshdb password=secretpassword") or die("Couldn't Connect");
   $r=0;
-  $q=pg_query("select * from product where p_category='vegetables'");
+  $q=pg_query("select * from product where p_category='fruits'");
   //$count1=pg_num_rows($q);
   //echo "$count1";
   while($row=pg_fetch_array($q))
@@ -52,7 +52,7 @@
 	}
 	else
 	{
-		?>Not available
+		?>Not available(Possibly Server Error. We are working on it.)
 <?php
 	}
 	
