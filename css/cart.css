@@ -1,5 +1,7 @@
 body {
-  font-family: 'lato', sans-serif;
+    font-family: 'lato', sans-serif;
+    background: url("../images/cart.jpg");
+    background-size: cover;
 }
 h1 {
     text-align: center;
