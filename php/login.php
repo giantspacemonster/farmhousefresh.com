@@ -33,8 +33,9 @@
   $q=pg_query("select * from reg");
     $n=0;
   while($row=pg_fetch_array($q)){
-  $_SESSION['uname'] = $row['first_name'];
+  $_SESSION['fname'] = $row['first_name'];
   $_SESSION['lname'] = $row['last_name'];
+  $_SESSION['email'] = $row['email'];
       if($row['email']==$id && $row['password']==$pass){
         $n=1;
       }

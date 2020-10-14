@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -43,8 +46,7 @@
     <p class="turncate"><?php echo $row['p_name'];?>(<?php echo $row['p_size'] ?> Kg/s Per batch)</p>
     <label for="price">Price:</label>&#8377 <?php echo $row['p_rate'];?><br/>
     Stock:<?php echo $row['quantity']; ?><br/>
-    <label for="quantity">Quantity:</label><input type="number" min="1" max="<?php echo $row['quantity']; ?>" name="quantity" /><br/>
-    <button class="cart" type="submit" name='s' >ADD TO CART</button>
+    <button class="cart"><a href="./cart.php?cartvalue=<?php echo $row['p_name'];?>">ADD TO CART</a></button>
   </div>
 </div>
 

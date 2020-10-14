@@ -66,8 +66,15 @@ img{
     width: 100%;
     
     background-color:skyblue;
-    color: white;
+    color: black;
     float: center;
+    transition: ease 1s;
+}
+
+.cart:hover {
+    background-color:black;
+    color: white;
+    
 }
 
 menu
@@ -195,31 +202,45 @@ footer{
 .social{
     text-align: center;
     margin: 20px;
+    width: 400px;
+    position: relative;
     font-size: 32px;
     text-decoration: none;
 }
 
 .social > i {
+    color: #8f8f8f;
     padding: 8px;
+    overflow-x: hidden;
+    transition: ease 0.5s;
+}
+.social > i:hover {
+    color: white;
+    font-size: 40px;
+    transform: translateY(-12px);
 }
 .explore{
     text-align: left;
     margin: 20px;
+    width: 400px;
     font-size: 32px;
     text-decoration: none;
 }
 .explore a{
-    color: white;
+    color: #8f8f8f;
     text-decoration: none;
+    transition: ease 0.5s;
+
+}
+.explore a:hover{
+    color: white;
+    font-size:40px;
 }
 .explore a:active{
     text-decoration: none;
     color: white;
 }
-.explore a:hover{
-    color: #ececec;
-    font-size:34px;
-}
+
 .bottom-copyright{
     padding: 0;
     margin: 0;

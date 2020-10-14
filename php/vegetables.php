@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -33,18 +36,19 @@
   //$count1=pg_num_rows($q);
   //echo "$count1";
   while($row=pg_fetch_array($q))
-  { 
+  {
     if(isset($row))
   {
   ?>
 <div class="card">
   <img src="<?php echo $row['img'];?>" width="256px" height="256px">
   <div class="card-container">
-    <p class="turncate"><?php echo $row['p_name'];?>(<?php echo $row['p_size'] ?> Kg/s Per batch)</p>
+    <form name="form" action="./cart.php" method="get">
+    <p class="turncate"><?php echo $row['p_name'];?> (<?php echo $row['p_size']; ?> Kg/s per bacth.</p>
     <label for="price">Price:</label>&#8377 <?php echo $row['p_rate'];?><br/>
     Stock:<?php echo $row['quantity']; ?><br/>
-    <label for="quantity">Quantity:</label><input type="number" min="1" max="<?php echo $row['quantity']; ?>" name="quantity" /><br/>
-    <button class="cart" type="submit" name='s' >ADD TO CART</button>
+    <button class="cart"><a href="./cart.php?cartvalue=<?php echo $row['p_name'];?>">ADD TO CART</a></button>
+    </form>
   </div>
 </div>
 
@@ -58,7 +62,7 @@
 	
 ?>
 <?php  
-}//while close
+  }//while close
   ?>
 </div>
   </body>

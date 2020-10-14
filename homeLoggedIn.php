@@ -27,7 +27,7 @@
       </nav>
     </div>
     <div class="log">
-      <a href="php/login.php"><font color="#ffffff" face="bold" size="6px">Welcome To Farmhouse Fresh <?php echo $_SESSION['uname']; ?> <?php echo $_SESSION['lname'];?> </font></a>
+      <a href="php/login.php"><font color="#ffffff" face="bold" size="6px">Welcome To Farmhouse Fresh <?php echo $_SESSION['fname']; ?> <?php echo $_SESSION['lname'];?> </font></a>
     </div>
     
     <section></section>
